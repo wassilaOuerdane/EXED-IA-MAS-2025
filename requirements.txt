@@ -1,0 +1,13 @@
+mesa[rec]
+numpy
+seaborn
+matplotlib
+altair
+networkx
+solara>=1.40
+ipywidgets
+ipyvuetify
+uvicorn<0.30
+
+
+
