@@ -61,7 +61,6 @@ class MoneyModel(mesa.Model):
         self.num_agents = n
         self.grid = mesa.space.MultiGrid(width, height, True)
 
-        # Create agents
         for i in range(n):
             agent = MoneyAgent(self)
 
@@ -69,7 +68,6 @@ class MoneyModel(mesa.Model):
             x = self.random.randrange(self.grid.width)
             y = self.random.randrange(self.grid.height)
             self.grid.place_agent(agent, (x, y))
-
 
         self.datacollector = mesa.DataCollector(
             model_reporters={"Gini": compute_gini}, agent_reporters={"Wealth": "wealth"}
